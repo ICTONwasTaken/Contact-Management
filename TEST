@@ -1,3 +1,4 @@
+
 contacts = [
     {
         "Name" : "Jerms",
@@ -6,7 +7,7 @@ contacts = [
     {
         "Name" : "Andrei",
         "Contact Number" : "12345"
-    }
+    },
     {
         "Name" : "Marius",
         "Contact Number" : "999"
@@ -14,38 +15,4 @@ contacts = [
 ]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def search_contact(contacts, query):
-    query = query.lower()
-    results = []
-    
-    for c in contacts:
-        if query in c["Name"].lower():
-            results.append(c)
-            
-    return results
-
-# --- Test ---
-query = input("Enter name: ")
-found = search_contact(contacts, query)
-
-if found:
-    for c in found:
-        print(f"Name: {c['Name']} | Phone: {c['Contact Number']}")
-else:
-    print("Not found.")
+print(contacts[0]["Name"])
