@@ -1,1 +1,51 @@
-TEST
+contacts = [
+    {
+        "Name" : "Jerms",
+        "Contact Number" : "0928906123"
+    },
+    {
+        "Name" : "Andrei",
+        "Contact Number" : "12345"
+    }
+    {
+        "Name" : "Marius",
+        "Contact Number" : "999"
+    }
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def search_contact(contacts, query):
+    query = query.lower()
+    results = []
+    
+    for c in contacts:
+        if query in c["Name"].lower():
+            results.append(c)
+            
+    return results
+
+# --- Test ---
+query = input("Enter name: ")
+found = search_contact(contacts, query)
+
+if found:
+    for c in found:
+        print(f"Name: {c['Name']} | Phone: {c['Contact Number']}")
+else:
+    print("Not found.")
